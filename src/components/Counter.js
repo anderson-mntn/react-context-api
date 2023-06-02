@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { CounterContext } from "../CounterContext";
 
 function Counter(props){
 
-    const [count, setCount] = useState(5)
+    const [count, setCount] = useContext(CounterContext)
 
     return(<div>
         <div>{count}</div>

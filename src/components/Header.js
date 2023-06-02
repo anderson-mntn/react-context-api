@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
+import { CounterContext } from "../CounterContext";
 
 function Header(props){
+    const [count, setCount] = useContext(CounterContext)
     return(<div className="c-header">
-        <h3>Header</h3>
-        <div>0</div>
+        <h3>Counter:</h3>
+        <div>{count}</div>
     </div>)
 }
 
